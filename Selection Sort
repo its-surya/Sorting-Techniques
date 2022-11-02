@@ -1,0 +1,30 @@
+/*
+
+
+*/
+
+
+public class selectionSort {
+    public static void selection_Sort(int[] a){
+        for(int i=0;i<a.length;i++){
+            int minimumIndex=i;
+            for(int j=i+1;j<a.length;j++){
+                if (a[j]<a[minimumIndex]){
+                    minimumIndex=j;
+                }
+            }
+            if(minimumIndex!=i){
+                int temp=a[i];
+                a[i]=a[minimumIndex];
+                a[minimumIndex]=temp;
+            }
+        }
+        for (int j : a) {
+            System.out.print(j + " ");
+        }
+    }
+    public static void main(String[] args) {
+        int[] array=new int[]{10,9,6,1,4,5};
+        selection_Sort(array);
+    }
+}
